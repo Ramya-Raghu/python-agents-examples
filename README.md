@@ -28,22 +28,15 @@ cd plivo-voice-agent
 
 2. Create virtual environment:
 ```bash
-python3.12 -m venv venv
-source venv/bin/activate
+uv venv
 ```
 
 3. Install dependencies:
 ```bash
-pip install "pipecat-ai[daily,deepgram,openai]"
-pip install fastapi uvicorn[standard] plivo python-dotenv
+uv pip install -r requirements.txt
 ```
 
-4. Download NLTK data:
-```bash
-python -c "import nltk; nltk.download('punkt_tab')"
-```
-
-5. Create `.env` file:
+4. Create `.env` file:
 ```bash
 cp .env.example .env
 ```
@@ -87,12 +80,6 @@ plivo-voice-agent/
 ## Configuration
 
 See `.env.example` for required environment variables.
-
-## Troubleshooting
-
-- **SSL Certificate Errors**: Run `/Applications/Python 3.12/Install Certificates.command`
-- **Port 8080 in use**: Run `kill -9 $(lsof -ti:8080)`
-- **NLTK errors**: Run `python -c "import nltk; nltk.download('punkt_tab')"`
 
 ## License
 
