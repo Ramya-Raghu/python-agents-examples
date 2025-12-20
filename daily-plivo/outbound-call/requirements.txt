@@ -1,0 +1,19 @@
+# Core dependencies
+pipecat-ai
+python-dotenv
+fastapi
+uvicorn[standard]
+aiohttp
+loguru
+python-multipart
+
+# Plivo SDK
+plivo
+
+# AI Services
+openai
+deepgram-sdk
+cartesia
+
+# Audio processing
+silero-vad
